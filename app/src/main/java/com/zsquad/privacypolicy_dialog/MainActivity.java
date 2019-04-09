@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
                 //open main activity
                 Intent i = new Intent(getApplicationContext(),Main2Activity.class);
                 startActivity(i);
+
                 savePrefsData();
                 finish();
             }
