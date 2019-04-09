@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--Dialog-->
-    <dimen name="Dialog_w">260dp</dimen>
-    <dimen name="Dialog_h">200dp</dimen>
+    <dimen name="Dialog_w">360dp</dimen>
+    <dimen name="Dialog_h">260dp</dimen>
     <dimen name="Dialog_bar_title">8sp</dimen>
     <dimen name="Diamond_w_h">40dp</dimen>
     <dimen name="Dialog_body_text">8sp</dimen>
 
     <!--dialog-->
     <dimen name="dialog_body">200dp</dimen>
-    <dimen name="dialog_valide_cancel_h">50dp</dimen>
-    <dimen name="dialog_valide_cancel_w">95dp</dimen>
+    <dimen name="dialog_valide_cancel_h">80dp</dimen>
+    <dimen name="dialog_valide_cancel_w">120dp</dimen>
     <dimen name="sp_store_name">16sp</dimen>
     <dimen name="sp_copy_right">12sp</dimen>
 
