@@ -9,8 +9,8 @@
 
     <!--dialog-->
     <dimen name="dialog_body">200dp</dimen>
-    <dimen name="dialog_valide_cancel_h">80dp</dimen>
-    <dimen name="dialog_valide_cancel_w">120dp</dimen>
+    <dimen name="dialog_valide_cancel_h">60dp</dimen>
+    <dimen name="dialog_valide_cancel_w">160dp</dimen>
     <dimen name="sp_store_name">16sp</dimen>
     <dimen name="sp_copy_right">12sp</dimen>
 
