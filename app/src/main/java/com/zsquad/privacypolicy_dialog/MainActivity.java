@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         Button btnAccep;
         Button btnCanal;
         btnAccep= findViewById(R.id.dialogbtn1);
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 //open main activity
                 Intent i = new Intent(getApplicationContext(),Main2Activity.class);
                 startActivity(i);
+
                 savePrefsData();
                 finish();
             }
