@@ -74,11 +74,13 @@
 
 
         </LinearLayout>
-
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#10000000"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -89,9 +91,12 @@
                 android:layout_height="@dimen/dialog_valide_cancel_h"
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/view_border"
-                android:text="ignore" />
 
+                android:text="ignore" />
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#10000000"/>
             <Button
                 android:id="@+id/dialogbtn1"
                 style="?android:attr/borderlessButtonStyle"
@@ -100,7 +105,7 @@
 
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/view_border"
+
                 android:text="accept" />
 
 
