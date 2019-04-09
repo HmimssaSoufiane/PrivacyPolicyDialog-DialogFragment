@@ -1,9 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@null"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="@dimen/Dialog_w"
+        android:layout_height="@dimen/Dialog_h"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.89"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialogtitletextView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="headr"
+                android:textColor="#382d39"
+                android:textSize="@dimen/Dialog_body_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/dialogtextView1"
+                android:layout_width="@dimen/dialog_body"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/testTest"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#53381d"
+                android:textSize="@dimen/Dialog_body_text" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/dialogbtn1"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/dialog_valide_cancel"
+                android:layout_height="@dimen/dialog_valide_cancel"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="15dp" />
+
+            <Button
+                android:id="@+id/dialogbtn3"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/Dialog_Oke_Button_w"
+                android:layout_height="@dimen/Dialog_Oke_Button_h"
+                android:background="@drawable/okeybutton"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/dialogbtn2"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/dialog_valide_cancel"
+                android:layout_height="@dimen/dialog_valide_cancel"
+                android:layout_marginLeft="15dp"
+                android:layout_marginStart="15dp"
+                android:background="@drawable/no_orange" />
+        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>
