@@ -5,8 +5,8 @@
     <dimen name="Dialog_h">260dp</dimen>
     <dimen name="Dialog_bar_title">8sp</dimen>
     <dimen name="Diamond_w_h">40dp</dimen>
-    <dimen name="Dialog_body_text">8sp</dimen>
-    <dimen name="Dialog_title">14sp</dimen>
+    <dimen name="Dialog_body_text">12sp</dimen>
+    <dimen name="Dialog_title">16sp</dimen>
 
     <!--dialog-->
     <dimen name="dialog_body">200dp</dimen>
