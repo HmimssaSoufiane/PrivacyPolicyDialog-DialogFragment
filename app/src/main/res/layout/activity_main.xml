@@ -10,8 +10,8 @@
     <LinearLayout
         android:layout_width="@dimen/Dialog_w"
         android:layout_height="@dimen/Dialog_h"
-        android:background="#fff"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@drawable/dialog_border">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -61,7 +61,8 @@
                 android:layout_height="@dimen/dialog_valide_cancel_h"
                 android:layout_marginEnd="15dp"
                 android:layout_marginRight="15dp"
-                android:text="accept" />
+                android:text="accept"
+                android:background="@drawable/view_border"/>
 
             <Button
                 android:id="@+id/dialogbtn2"
@@ -70,7 +71,8 @@
                 android:layout_height="@dimen/dialog_valide_cancel_h"
                 android:layout_marginStart="15dp"
                 android:layout_marginLeft="15dp"
-                android:text="ignore" />
+                android:text="ignore"
+                android:background="@drawable/view_border"/>
         </LinearLayout>
     </LinearLayout>
 
