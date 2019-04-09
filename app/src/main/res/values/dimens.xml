@@ -6,12 +6,11 @@
     <dimen name="Dialog_bar_title">8sp</dimen>
     <dimen name="Diamond_w_h">40dp</dimen>
     <dimen name="Dialog_body_text">8sp</dimen>
-    <dimen name="Dialog_Oke_Button_w">80dp</dimen>
-    <dimen name="Dialog_Oke_Button_h">40dp</dimen>
-    <dimen name="Dialog_Oke_Button_text">8sp</dimen>
+
     <!--dialog-->
     <dimen name="dialog_body">200dp</dimen>
-    <dimen name="dialog_valide_cancel">50dp</dimen>
+    <dimen name="dialog_valide_cancel_h">60dp</dimen>
+    <dimen name="dialog_valide_cancel_w">90dp</dimen>
     <dimen name="sp_store_name">16sp</dimen>
     <dimen name="sp_copy_right">12sp</dimen>
 
