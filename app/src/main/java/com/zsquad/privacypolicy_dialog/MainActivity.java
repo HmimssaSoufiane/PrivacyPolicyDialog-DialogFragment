@@ -17,6 +17,11 @@ public class MainActivity extends AppCompatActivity {
         Button btnCanal;
         btnAccep= findViewById(R.id.dialogbtn1);
         btnCanal= findViewById(R.id.dialogbtn2);
+        if (restorePrefData()) {
+            Intent i = new Intent(getApplicationContext(),Main2Activity.class );
+            startActivity(i);
+            finish();
+        }
         btnAccep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -34,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+    private boolean restorePrefData() {
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
+        Boolean isIntroActivityOpnendBefore = pref.getBoolean("isIntroOpnend",false);
+        return  isIntroActivityOpnendBefore;
     }
     private void savePrefsData(){
 
