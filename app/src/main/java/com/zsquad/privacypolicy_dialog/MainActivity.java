@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,29 +16,28 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getSupportActionBar().hide();
-        Button btnAccep;
-        Button btnCanal;
-        btnAccep= findViewById(R.id.dialogbtn1);
-        btnCanal= findViewById(R.id.dialogbtn2);
+        Button btnAccept;
+        Button btnIgnore;
+        btnAccept= findViewById(R.id.dialogbtn1);
+        btnIgnore= findViewById(R.id.dialogbtn2);
         if (restorePrefData()) {
             Intent i = new Intent(getApplicationContext(),Main2Activity.class );
             startActivity(i);
             finish();
         }
-        btnAccep.setOnClickListener(new View.OnClickListener() {
+        btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //open main activity
                 Intent i = new Intent(getApplicationContext(),Main2Activity.class);
                 startActivity(i);
-
                 savePrefsData();
                 finish();
             }
         });
-        btnCanal.setOnClickListener(new View.OnClickListener() {
+        btnIgnore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Not Accepted", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
