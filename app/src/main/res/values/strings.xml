@@ -4,4 +4,6 @@
     <string name="Dialog_title">ACCEPT FERMS</string>
     <string name="Brand"> your Brand\u0020 </string>
     <string name="privacy_policy">Privacy Policy</string>
+    <string name="accept">accept</string>
+    <string name="ignore">ignore</string>
 </resources>
