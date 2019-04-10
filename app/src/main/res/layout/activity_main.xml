@@ -42,7 +42,7 @@
             android:layout_height="0dp"
             android:layout_weight="8"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/dialogtextView1"
@@ -53,28 +53,36 @@
                 android:textColor="#53381d"
                 android:textSize="@dimen/Dialog_body_text" />
 
-            <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/Brand" />
-            <TextView
-                android:id="@+id/textView2"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/is" />
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/privacy_policy"
-                android:textColor="#33b5e5"/>
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Brand" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/privacy_policy"
+                    android:textColor="#33b5e5" />
+            </LinearLayout>
+
+
         </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#10000000" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -85,19 +93,24 @@
                 android:layout_height="@dimen/dialog_valide_cancel_h"
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
-                android:background="@drawable/view_border"
-                android:text="ignore" />
+                android:text="ignore"
+                android:textColor="#0000cc" />
+
+            <View
+                android:layout_width="2dp"
+                android:layout_height="match_parent"
+                android:background="#10000000" />
 
             <Button
                 android:id="@+id/dialogbtn1"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="@dimen/dialog_valide_cancel_w"
                 android:layout_height="@dimen/dialog_valide_cancel_h"
-
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
-                android:background="@drawable/view_border"
-                android:text="accept" />
+                android:text="accept"
+
+                android:textColor="#0000cc" />
 
 
         </LinearLayout>
