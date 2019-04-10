@@ -81,8 +81,9 @@
                 android:layout_height="@dimen/dialog_valide_cancel_h"
                 android:layout_marginEnd="5dp"
                 android:layout_marginRight="5dp"
+                android:background="#66000000"
                 android:text="@string/ignore"
-                android:textColor="#0000cc" />
+                android:textColor="#FFFFFF" />
 
             <View
                 android:layout_width="2dp"
@@ -96,8 +97,9 @@
                 android:layout_height="@dimen/dialog_valide_cancel_h"
                 android:layout_marginStart="5dp"
                 android:layout_marginLeft="5dp"
+                android:background="#77b5fe"
                 android:text="@string/accept"
-                android:textColor="#0000cc" />
+                android:textColor="#FFFFFF" />
 
 
         </LinearLayout>
