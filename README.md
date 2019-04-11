@@ -1,3 +1,3 @@
 # Privacy Policy Dialog
 
-<img src="Capture.PNG" with="40px"/>
+<img src="Capture.PNG" width="300" >
