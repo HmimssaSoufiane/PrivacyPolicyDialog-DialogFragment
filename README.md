@@ -19,8 +19,7 @@ Add it in your root build.gradle at the end of repositories:<br>
 		}
 		
 <h1>Step 2. Add your privacy and you storename</h1>
-
- Bundle args = new Bundle();
+ 	Bundle args = new Bundle();
         args.putString("storeName","ArchaSoft ");
         args.putString("PrivacyURL","https://github.com/HmimssaSoufiane/PrivacyPolicyDialog");
         PrivacyPolicyDialog dialog=new PrivacyPolicyDialog();
