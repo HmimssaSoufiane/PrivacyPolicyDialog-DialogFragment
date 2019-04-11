@@ -11,7 +11,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        PrivacyPolicyDialog dialog=new PrivacyPolicyDialog(this,Main2Activity.class);
+        PrivacyPolicyDialog dialog=new PrivacyPolicyDialog();
+        dialog.setNextActivity(Main2Activity.class);
         dialog.show(getSupportFragmentManager(), "Text");
     }
 }

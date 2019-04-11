@@ -1,7 +1,6 @@
 package com.example.zsquad.privacypolicydialoglibrary;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -20,16 +19,11 @@ public class PrivacyPolicyDialog extends DialogFragment {
     Button btnAccept;
     Button btnIgnore;
     SharedPreferences pref;
-    Context context;
-    Class<? extends Activity> splash;
+    Class <? extends Activity> splash;
 
-    public PrivacyPolicyDialog(){}
+    public PrivacyPolicyDialog() {
+    }
 
-//    public PrivacyPolicyDialog(Context context,Class yourSplashActivity ) {
-//        this.context=context;
-//        this.splash=yourSplashActivity;
-//
-//    }
 
     @Nullable
     @Override
@@ -39,45 +33,50 @@ public class PrivacyPolicyDialog extends DialogFragment {
 
         btnAccept = view.findViewById(R.id.dialogbtn1);
         btnIgnore = view.findViewById(R.id.dialogbtn2);
-        //SharedPreferences pref = context.getSharedPreferences("myPrefs", MODE_PRIVATE);
+        pref = getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
 
 
-//        if (restorePrefData()) {
-//            Intent i = new Intent(context,splash );
-//            startActivity(i);
-//            ((Activity) context).finish();
-//        }
+        if (restorePrefData()) {
+            Intent i = new Intent(getActivity(), splash);
+            startActivity(i);
+            ((Activity) getActivity()).finish();
+        }
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent( context,splash );
+                Intent i = new Intent(getActivity(), splash);
                 startActivity(i);
-                //savePrefsData();
-                //((Activity) context).finish();
+                savePrefsData();
+                ((Activity) getActivity()).finish();
+                Toast.makeText(getActivity(), "Accepted", Toast.LENGTH_SHORT).show();
+
 
             }
         });
         btnIgnore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context, "Not Accepted", Toast.LENGTH_SHORT).show();
-               // ((Activity) context).finish();
+                Toast.makeText(getActivity(), "Not Accepted", Toast.LENGTH_SHORT).show();
+                ((Activity) getActivity()).finish();
             }
         });
         return view;
     }
 
+    public void setNextActivity(Class yourSplash) {
+        this.splash = yourSplash;
+    }
 
-//    private boolean restorePrefData() {
-//
-//        return pref.getBoolean("isIntroOpnend", false);
-//    }
-//
-//    private void savePrefsData() {
-//
-//
-//        SharedPreferences.Editor editor = pref.edit();
-//        editor.putBoolean("isIntroOpnend", true);
-//        editor.apply();
-//    }
+    private boolean restorePrefData() {
+
+        return pref.getBoolean("isIntroOpnend", false);
+    }
+
+    private void savePrefsData() {
+
+
+        SharedPreferences.Editor editor = pref.edit();
+        editor.putBoolean("isIntroOpnend", true);
+        editor.apply();
+    }
 }
