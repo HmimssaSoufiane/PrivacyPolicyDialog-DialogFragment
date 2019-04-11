@@ -1,3 +1,3 @@
 # Privacy Policy Dialog
-Welcome to the PrivacyPolicyDialog wiki!
-![](Screenshot.png)
+
+<img src="Capture.PNG" width="300" >
