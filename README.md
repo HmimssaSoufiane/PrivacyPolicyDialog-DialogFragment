@@ -5,7 +5,6 @@
 # Step 1. Add the JitPack repository to your build file</h1>
 # # Add it in your root build.gradle at the end of repositories:
 ```
-
 	allprojects {
 		repositories {
 			...
@@ -16,7 +15,6 @@
 
 # Step 2. Add the dependency</h1>
 ```
-
 	dependencies {
 	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:2.0.0"
 		}
