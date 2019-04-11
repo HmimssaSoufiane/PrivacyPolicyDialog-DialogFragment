@@ -37,7 +37,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
 
 
         if (restorePrefData()) {
-            (getActivity()).finish();
+            dialogFragment.dismiss();
         }
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override

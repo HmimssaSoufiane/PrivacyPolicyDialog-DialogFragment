@@ -13,5 +13,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         PrivacyPolicyDialog dialog=new PrivacyPolicyDialog();
         dialog.show(getSupportFragmentManager(), "Text");
+
     }
 }
