@@ -19,8 +19,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
     Button btnAccept;
     Button btnIgnore;
     SharedPreferences pref;
-    Class <? extends Activity> splash;
-
+    DialogFragment dialogFragment;
     public PrivacyPolicyDialog() {
     }
 
@@ -34,37 +33,29 @@ public class PrivacyPolicyDialog extends DialogFragment {
         btnAccept = view.findViewById(R.id.dialogbtn1);
         btnIgnore = view.findViewById(R.id.dialogbtn2);
         pref = getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
+        dialogFragment=this;
 
 
         if (restorePrefData()) {
-            Intent i = new Intent(getActivity(), splash);
-            startActivity(i);
-            ((Activity) getActivity()).finish();
+            (getActivity()).finish();
         }
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), splash);
-                startActivity(i);
+
                 savePrefsData();
-                ((Activity) getActivity()).finish();
                 Toast.makeText(getActivity(), "Accepted", Toast.LENGTH_SHORT).show();
-
-
+                dialogFragment.dismiss();
             }
         });
         btnIgnore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(getActivity(), "Not Accepted", Toast.LENGTH_SHORT).show();
-                ((Activity) getActivity()).finish();
+                (getActivity()).finish();
             }
         });
         return view;
-    }
-
-    public void setNextActivity(Class<? extends Activity>  yourSplash) {
-        this.splash = yourSplash;
     }
 
     private boolean restorePrefData() {
