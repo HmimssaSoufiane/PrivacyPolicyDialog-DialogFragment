@@ -11,7 +11,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Bundle args = new Bundle();
+        args.putString("storeName","ArchaSoft ");
+        args.putString("PrivacyURL","https://github.com/HmimssaSoufiane/PrivacyPolicyDialog");
         PrivacyPolicyDialog dialog=new PrivacyPolicyDialog();
+        dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "Text");
 
     }

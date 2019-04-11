@@ -1,8 +1,9 @@
 <resources>
     <string name="app_name">Privacy Policy - Dialog</string>
     <string name="testTest">By accepting this , your are agree to the\u0020 </string>
-    <string name="Dialog_title">ACCEPT FERMS</string>
+    <string name="Dialog_title">ACCEPT TERMS</string>
     <string name="Brand"> your Brand\u0020 </string>
     <string name="privacy_policy">Privacy Policy</string>
-    <string name="ignore">ignore</string>
+    <string name="accept">Accept</string>
+    <string name="ignore">Ignore</string>
 </resources>
