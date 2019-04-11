@@ -50,7 +50,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(context,splash );
+                Intent i = new Intent( context,splash );
                 startActivity(i);
                 savePrefsData();
                 ((Activity) context).finish();
