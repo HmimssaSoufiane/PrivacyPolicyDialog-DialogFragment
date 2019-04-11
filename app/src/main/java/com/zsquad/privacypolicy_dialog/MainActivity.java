@@ -15,45 +15,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
-        Button btnAccept;
-        Button btnIgnore;
-        btnAccept= findViewById(R.id.dialogbtn1);
-        btnIgnore= findViewById(R.id.dialogbtn2);
-        if (restorePrefData()) {
-            Intent i = new Intent(getApplicationContext(),Main2Activity.class );
-            startActivity(i);
-            finish();
-        }
-        btnAccept.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),Main2Activity.class);
-                startActivity(i);
-                savePrefsData();
-                finish();
-            }
-        });
-        btnIgnore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "Not Accepted", Toast.LENGTH_SHORT).show();
-                finish();
-            }
-        });
 
-    }
-    private boolean restorePrefData() {
-
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
-        Boolean isIntroActivityOpnendBefore = pref.getBoolean("isIntroOpnend",false);
-        return  isIntroActivityOpnendBefore;
-    }
-    private void savePrefsData(){
-
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("myPrefs",MODE_PRIVATE);
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("isIntroOpnend",true);
-        editor.commit();
     }
 }
