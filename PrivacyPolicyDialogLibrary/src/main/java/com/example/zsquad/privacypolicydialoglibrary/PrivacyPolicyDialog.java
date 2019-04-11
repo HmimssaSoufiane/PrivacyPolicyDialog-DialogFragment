@@ -63,18 +63,15 @@ public class PrivacyPolicyDialog extends DialogFragment {
         return view;
     }
 
-    public void setNextActivity(Class yourSplash) {
+    public void setNextActivity(Class<? extends Activity>  yourSplash) {
         this.splash = yourSplash;
     }
 
     private boolean restorePrefData() {
-
         return pref.getBoolean("isIntroOpnend", false);
     }
 
     private void savePrefsData() {
-
-
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("isIntroOpnend", true);
         editor.apply();
