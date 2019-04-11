@@ -54,7 +54,6 @@ public class PrivacyPolicyDialog extends DialogFragment {
         //SharedPreferences to store dialog show state
         pref = getActivity().getSharedPreferences("myPrefs", MODE_PRIVATE);
 
-
         //check dialog state
         if (restorePrefData()) {
             dialogFragment.dismiss();
