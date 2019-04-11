@@ -25,11 +25,11 @@ public class PrivacyPolicyDialog extends DialogFragment {
 
     public PrivacyPolicyDialog(){}
 
-    public PrivacyPolicyDialog(Context context,Class yourSplashActivity ) {
-        this.context=context;
-        this.splash=yourSplashActivity;
-
-    }
+//    public PrivacyPolicyDialog(Context context,Class yourSplashActivity ) {
+//        this.context=context;
+//        this.splash=yourSplashActivity;
+//
+//    }
 
     @Nullable
     @Override
@@ -39,21 +39,21 @@ public class PrivacyPolicyDialog extends DialogFragment {
 
         btnAccept = view.findViewById(R.id.dialogbtn1);
         btnIgnore = view.findViewById(R.id.dialogbtn2);
-        SharedPreferences pref = context.getSharedPreferences("myPrefs", MODE_PRIVATE);
+        //SharedPreferences pref = context.getSharedPreferences("myPrefs", MODE_PRIVATE);
 
 
-        if (restorePrefData()) {
-            Intent i = new Intent(context,splash );
-            startActivity(i);
-            ((Activity) context).finish();
-        }
+//        if (restorePrefData()) {
+//            Intent i = new Intent(context,splash );
+//            startActivity(i);
+//            ((Activity) context).finish();
+//        }
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent( context,splash );
                 startActivity(i);
-                savePrefsData();
-                ((Activity) context).finish();
+                //savePrefsData();
+                //((Activity) context).finish();
 
             }
         });
@@ -61,23 +61,23 @@ public class PrivacyPolicyDialog extends DialogFragment {
             @Override
             public void onClick(View v) {
                 Toast.makeText(context, "Not Accepted", Toast.LENGTH_SHORT).show();
-                ((Activity) context).finish();
+               // ((Activity) context).finish();
             }
         });
         return view;
     }
 
 
-    private boolean restorePrefData() {
-
-        return pref.getBoolean("isIntroOpnend", false);
-    }
-
-    private void savePrefsData() {
-
-
-        SharedPreferences.Editor editor = pref.edit();
-        editor.putBoolean("isIntroOpnend", true);
-        editor.apply();
-    }
+//    private boolean restorePrefData() {
+//
+//        return pref.getBoolean("isIntroOpnend", false);
+//    }
+//
+//    private void savePrefsData() {
+//
+//
+//        SharedPreferences.Editor editor = pref.edit();
+//        editor.putBoolean("isIntroOpnend", true);
+//        editor.apply();
+//    }
 }
