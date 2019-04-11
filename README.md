@@ -1,3 +1,3 @@
 # Privacy Policy Dialog
 
-![](Capture.PNG)
+<img src="Capture.PNG" with="40px"/>
