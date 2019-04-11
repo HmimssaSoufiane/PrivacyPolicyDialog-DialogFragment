@@ -14,7 +14,8 @@ Add it in your root build.gradle at the end of repositories:<br>
 	}
 `
 <h1>Step 2. Add the dependency</h1>
-`dependencies {
+
+	dependencies {
 	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:2.0.0"
-	}
-`
+		}
+
