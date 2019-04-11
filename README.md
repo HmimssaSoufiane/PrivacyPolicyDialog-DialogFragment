@@ -1,1 +1,1 @@
-# PrivacyPolicyDialog
+# Privacy Policy Dialog
