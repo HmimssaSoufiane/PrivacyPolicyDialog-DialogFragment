@@ -29,6 +29,6 @@
         dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "Text");
 ```
-#Developed By
+# Developed By
 
 Made by Salah chnitfa and Hmimssa Soufiane 
