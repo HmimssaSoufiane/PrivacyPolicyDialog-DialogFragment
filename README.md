@@ -29,3 +29,4 @@
         dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "Text");
 ```
+Made by Hmimssa Soufiane and Salah chnitfa
