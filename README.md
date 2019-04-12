@@ -16,7 +16,7 @@
 # Step 2. Add the dependency
 ```
 	dependencies {
-	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:2.0.0"
+	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:3.0.0"
 		}
 ```
 # Step 2. Add your privacy and you storename
