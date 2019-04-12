@@ -19,7 +19,7 @@
 	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:3.0.0"
 		}
 ```
-# Step 2. Add your privacy and you storename
+# Step 2. Go to your splash and add this code(put privacy  url and you store name)
 
 ```
  	Bundle args = new Bundle();
