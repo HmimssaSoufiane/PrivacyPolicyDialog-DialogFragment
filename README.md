@@ -31,4 +31,4 @@
 ```
 # Developed By
 
-Made by Salah chnitfa and Hmimssa Soufiane 
+Salah chnitfa and Hmimssa Soufiane 
