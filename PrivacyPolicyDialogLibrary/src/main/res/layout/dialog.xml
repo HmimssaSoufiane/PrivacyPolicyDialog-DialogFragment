@@ -37,6 +37,9 @@
             android:id="@+id/dialogtextView1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
             android:text="@string/testTest"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="#53381d"
@@ -45,7 +48,6 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
 
             <TextView
@@ -63,44 +65,20 @@
         </LinearLayout>
 
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#10000000" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/dialogbtn2"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="@dimen/dialog_valide_cancel_w"
-                android:layout_height="@dimen/dialog_valide_cancel_h"
-                android:layout_marginEnd="5dp"
-                android:layout_marginRight="5dp"
-                android:text="@string/ignore"
-                android:textColor="#0000cc" />
-
-            <View
-                android:layout_width="2dp"
-                android:layout_height="match_parent"
-                android:background="#10000000" />
-
-            <Button
-                android:id="@+id/dialogbtn1"
-                style="?android:attr/borderlessButtonStyle"
-                android:layout_width="@dimen/dialog_valide_cancel_w"
-                android:layout_height="@dimen/dialog_valide_cancel_h"
-                android:layout_marginStart="5dp"
-                android:layout_marginLeft="5dp"
-                android:text="@string/accept"
-                android:textColor="#0000cc" />
+        <Button
+            android:id="@+id/dialogbtn1"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="@dimen/dialog_valide_cancel_w"
+            android:layout_height="@dimen/dialog_valide_cancel_h"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/dialog_border"
+            android:text="@string/accept"
+            android:textColor="#0000cc" />
 
 
-        </LinearLayout>
     </LinearLayout>
 
 </LinearLayout>

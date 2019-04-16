@@ -22,7 +22,6 @@ import static android.content.Context.MODE_PRIVATE;
 
 public class PrivacyPolicyDialog extends DialogFragment {
     Button btnAccept;
-    Button btnIgnore;
     TextView textViewBrand;
     TextView textViewPrivacyPolicy;
     SharedPreferences pref;
@@ -42,7 +41,6 @@ public class PrivacyPolicyDialog extends DialogFragment {
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         //
         btnAccept = view.findViewById(R.id.dialogbtn1);
-        btnIgnore = view.findViewById(R.id.dialogbtn2);
         textViewBrand = view.findViewById(R.id.textViewBrand);
         textViewPrivacyPolicy = view.findViewById(R.id.textViewPrivacyPolicy);
         dialogFragment = this;
@@ -66,13 +64,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
                 dialogFragment.dismiss();
             }
         });
-        btnIgnore.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getActivity(), "Not Accepted", Toast.LENGTH_SHORT).show();
-                (getActivity()).finish();
-            }
-        });
+
         textViewPrivacyPolicy.setOnClickListener(new View.OnClickListener() {
 
             @Override
