@@ -39,6 +39,8 @@ public class PrivacyPolicyDialog extends DialogFragment {
         //Dialog style
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
         getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        getDialog().setCanceledOnTouchOutside(false);
+
         //
         btnAccept = view.findViewById(R.id.dialogbtn1);
         textViewBrand = view.findViewById(R.id.textViewBrand);
