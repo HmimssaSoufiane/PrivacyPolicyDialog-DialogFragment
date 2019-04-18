@@ -1,6 +1,8 @@
 package com.example.zsquad.privacypolicydialoglibrary;
 
+import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
@@ -26,6 +28,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
     TextView textViewPrivacyPolicy;
     SharedPreferences pref;
     DialogFragment dialogFragment;
+    public boolean isDismiss=false;
 
     public PrivacyPolicyDialog() {
     }
@@ -94,5 +97,11 @@ public class PrivacyPolicyDialog extends DialogFragment {
         SharedPreferences.Editor editor = pref.edit();
         editor.putBoolean("isIntroOpnend", true);
         editor.apply();
+    }
+
+    @Override
+    public void onDismiss(DialogInterface dialog) {
+        super.onDismiss(dialog);
+        isDismiss=true;
     }
 }
