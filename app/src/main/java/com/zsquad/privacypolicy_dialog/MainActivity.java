@@ -25,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
                 try {
-                    while (dialog.isDismiss == false) {
+                    while (!dialog.isDismiss) {
                         this.wait(3000);
                     }
-                } catch (Exception e){}
-                finally {
+                } catch (Exception e) {
+                    //
+                } finally {
                     System.out.println("Fin demon");
-                    startActivity(new Intent(MainActivity.this, Main2Activity.class));
+                    startActivity(new Intent(MainActivity.this,Main2Activity.class ));
                 }
             }
 
