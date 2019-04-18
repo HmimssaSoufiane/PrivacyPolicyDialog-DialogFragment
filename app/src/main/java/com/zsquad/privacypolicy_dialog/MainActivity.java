@@ -3,6 +3,8 @@ package com.zsquad.privacypolicy_dialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.example.zsquad.privacypolicydialoglibrary.PrivacyPolicyDialog;
 
@@ -13,6 +15,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Toast.makeText(MainActivity.this, "start", Toast.LENGTH_SHORT).show();
 
         Bundle args = new Bundle();
         args.putString("storeName", "ArchaSoft ");
@@ -26,20 +30,25 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     while (!dialog.isDismiss) {
-                        this.wait(3000);
+                        Log.i("thread", "while");
+                        Thread.sleep(4000);
                     }
                 } catch (Exception e) {
-                    //
+                    Log.i("thread", "Exception"+e.getMessage());
+
+
                 } finally {
-                    System.out.println("Fin demon");
                     startActivity(new Intent(MainActivity.this,Main2Activity.class ));
+                    Log.i("thread", "Fin");
+
+                    finish();
                 }
             }
 
         }, "Demon");
 
         daemonThread.start();
-        //
+
 
     }
 }
