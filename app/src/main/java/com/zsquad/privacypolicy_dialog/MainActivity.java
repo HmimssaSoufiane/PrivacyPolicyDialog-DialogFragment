@@ -16,7 +16,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this, "start", Toast.LENGTH_SHORT).show();
 
         Bundle args = new Bundle();
         args.putString("storeName", "ArchaSoft ");

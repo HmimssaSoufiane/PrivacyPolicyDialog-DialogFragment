@@ -16,18 +16,43 @@
 # Step 2. Add the dependency
 ```
 	dependencies {
-	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:4.0.0"
+	        implementation "com.github.HmimssaSoufiane:PrivacyPolicyDialog:5.0.0"
 		}
 ```
 # Step 2. Go to your splash and add this code(put privacy  url and you store name)
 
 ```
- 	Bundle args = new Bundle();
-        args.putString("storeName","ArchaSoft ");
-        args.putString("PrivacyURL","https://github.com/HmimssaSoufiane/PrivacyPolicyDialog");
-        PrivacyPolicyDialog dialog=new PrivacyPolicyDialog();
-        dialog.setArguments(args);
-        dialog.show(getSupportFragmentManager(), "Text");
+ 	 Bundle args = new Bundle();
+            args.putString("storeName", "ArchaSoft ");
+            args.putString("PrivacyURL", "https://github.com/HmimssaSoufiane/PrivacyPolicyDialog");
+            PrivacyPolicyDialog dialog = new PrivacyPolicyDialog();
+            dialog.setArguments(args);
+            dialog.show(getSupportFragmentManager(), "Text");
+            //
+            final Intent goNextActivity = new Intent(this, Main2Activity.class);
+
+            Thread daemonThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        while (!PrivacyPolicyDialog.isDismiss) {
+                            Log.i("thread", "while");
+                            Thread.sleep(1000);
+                        }
+                    } catch (Exception e) {
+                        Log.i("thread", "Exception" + e.getMessage());
+
+
+                    } finally {
+                        startActivity(goNextActivity);
+                        Log.i("thread", "Fin");
+                        finish();
+                    }
+                }
+
+            }, "Demon");
+
+            daemonThread.start();
 ```
 # Developed By
 
