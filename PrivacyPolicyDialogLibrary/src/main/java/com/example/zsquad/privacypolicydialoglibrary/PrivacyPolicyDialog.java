@@ -28,7 +28,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
     TextView textViewPrivacyPolicy;
     SharedPreferences pref;
     DialogFragment dialogFragment;
-    public boolean isDismiss=false;
+    public static boolean isDismiss=false;
 
     public PrivacyPolicyDialog() {
     }
@@ -60,6 +60,7 @@ public class PrivacyPolicyDialog extends DialogFragment {
         //check dialog state
         if (restorePrefData()) {
             dialogFragment.dismiss();
+            isDismiss=true;
         }
         btnAccept.setOnClickListener(new View.OnClickListener() {
             @Override

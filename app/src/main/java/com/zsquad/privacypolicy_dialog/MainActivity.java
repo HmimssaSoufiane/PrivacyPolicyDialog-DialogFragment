@@ -21,26 +21,26 @@ public class MainActivity extends AppCompatActivity {
         Bundle args = new Bundle();
         args.putString("storeName", "ArchaSoft ");
         args.putString("PrivacyURL", "https://github.com/HmimssaSoufiane/PrivacyPolicyDialog");
-        final PrivacyPolicyDialog dialog = new PrivacyPolicyDialog();
+        PrivacyPolicyDialog dialog = new PrivacyPolicyDialog();
         dialog.setArguments(args);
         dialog.show(getSupportFragmentManager(), "Text");
+        final Intent goNextActivity = new Intent(this, Main2Activity.class);
 
         Thread daemonThread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
-                    while (!dialog.isDismiss) {
+                    while (!PrivacyPolicyDialog.isDismiss) {
                         Log.i("thread", "while");
-                        Thread.sleep(4000);
+                        Thread.sleep(1000);
                     }
                 } catch (Exception e) {
-                    Log.i("thread", "Exception"+e.getMessage());
+                    Log.i("thread", "Exception" + e.getMessage());
 
 
                 } finally {
-                    startActivity(new Intent(MainActivity.this,Main2Activity.class ));
+                    startActivity(goNextActivity);
                     Log.i("thread", "Fin");
-
                     finish();
                 }
             }
